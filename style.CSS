@@ -1,0 +1,361 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: white;
+  background: none;
+  border: none;
+  padding: 8px 22px;
+  font-size: 1rem;
+  height: 45px;
+  cursor: pointer;
+}
+
+
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Light grey background */
+  color: #333; /* Dark text */
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: #777;
+}
+
+.container {
+  backdrop-filter: brightness(80%);
+  height: 100vh;
+}
+
+#descript {
+  width: 100%;
+  max-width: 585px;
+  height: auto;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.name {
+  font-size: 3.5rem; /* Scales better on smaller screens */
+  text-align: center;
+  filter: drop-shadow(10px 7px 8px #1e1c54);
+}
+
+#sub1 {
+  font-size: 1.8rem;
+  text-align: center;
+  padding-bottom: 0px;
+}
+
+#subJob {
+  margin: 0 auto;
+  font-size: 1.5rem;
+  padding: 10px 0px;
+  text-align: center;
+}
+
+.intro1 {
+  position: relative;
+  padding: 20px;
+  width: 90%;
+  max-width: 70vmax;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 20vh 20vh;
+  background-color: rgba(
+    192,
+    191,
+    191,
+    0.668
+  ); /* Semi-transparent background */
+  border-radius: 15px;
+  backdrop-filter: blur(15px); /* Apply blur effect */
+  -webkit-backdrop-filter: blur(15px); /* For Safari */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8); /* Shadow for better visibility */
+}
+
+.namediv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+}
+
+button {
+  color: white;
+  background: none;
+  border: none;
+  padding: 8px 22px;
+  font-size: 1rem;
+  height: 45px;
+  cursor: pointer;
+}
+button:hover {
+  backdrop-filter: blur(10px) saturate(124%);
+  -webkit-backdrop-filter: blur(10px) saturate(124%);
+  background-color: rgba(17, 25, 40, 0.51);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+/* Ensure the navbar is positioned above the background */
+.nav {
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+  color: #fff;
+  padding: 1em 0;
+  position: fixed; /* Fixed navigation */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100; /* Ensure it stays above the hero background */
+  backdrop-filter: blur(10px) saturate(124%);
+  -webkit-backdrop-filter: blur(10px) saturate(124%);
+  background-color: rgba(17, 25, 40, 0.51);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: center;
+  height: 65px;
+}
+
+.skills-container {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.skills-container h2{
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  .intro1 {
+    width: 90%;
+    margin-top: 100px;
+  }
+
+  .namediv{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .namediv h1 {
+    font-size: 40px;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  #sub1 {
+    font-size: 1.5rem;
+  }
+
+  #subJob {
+    font-size: 1.2rem;
+    margin: 0 auto;
+  }
+
+  #descript {
+    font-size: 1rem;
+    margin: 10px auto;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 6px 18px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .intro1 {
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 15px;
+  }
+  .namediv{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .namediv h1 {
+    font-size: 40px;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  #sub1 {
+    font-size: 1.2rem;
+  }
+
+  #subJob {
+    font-size: 1rem;
+  }
+
+  #descript {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.8rem;
+    padding: 5px 15px;
+  }
+}
+
+.skill-logo {
+  height: 60px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.skill-logo:hover{
+  opacity: 1;
+}
+
+.skill-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  backdrop-filter: blur(15px) saturate(150%); /* Blur and saturation */
+  -webkit-backdrop-filter: blur(15px) saturate(150%); /* Safari support */
+  border-radius: 15px; /* Rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+
+#tailwind_logo {
+  height: 45px;
+}
+
+/* Hero section with full-page background */
+.hero {
+  background-image: url("/src/1315871.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll; /* Ensure it scrolls with the page */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  position: relative; /* Ensure it doesn't overlap other elements */
+  padding-top: 65px; /* Offset for the fixed navbar */
+}
+
+.projects {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+}
+
+.projects h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive grid */
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.project-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+}
+
+.project-item h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.project-item p {
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #777;
+}
+
+.visit-site {
+  display: inline-block;
+  background-color: #007bff; /* Blue button */
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.visit-site:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9em;
+}
+
+.contact-me{
+  padding: 20px;
+}
+
+.contact-me p{
+  color: white;
+}
+
+.links{
+  
+}
+
+.contact-me i{
+  font-size: 30px;
+}
+
+.contact-me-content{
+  display: flex;
+  justify-content: space-between;
+}
